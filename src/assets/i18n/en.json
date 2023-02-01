@@ -1,0 +1,28 @@
+{
+  "header": {
+    "title": {
+      "default": "Workshop"
+    },
+    "menu": {
+      "directives": "Directives",
+      "pipes": "Pipes",
+      "rxjs": "RxJS",
+      "forms": "Forms",
+      "lifecycle": "Lifecycle"
+    }
+  },
+  "home":{
+    "login": {
+      "username": {
+        "title": "Username",
+        "placeholder": "Enter your username"
+      },
+      "password": {
+        "title": "Password",
+        "placeholder": "Enter your password"
+      },
+      "login": "Login",
+      "logout": "Logout"
+    }
+  }
+}

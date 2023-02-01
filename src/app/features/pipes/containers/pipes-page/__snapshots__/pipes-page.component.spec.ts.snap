@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PipesPageComponent should be pass the snapshot 1`] = `
+<app-pipes-page
+  __ngContext__={[Function LRootView]}
+>
+  <h1>
+    Pipes
+  </h1><p>
+    LowerCasePipe: hola mundo
+  </p><p>
+    UpperCasePipe: HOLA MUNDO
+  </p><p>
+    TitleCasePipe: Hola Mundo
+  </p><p>
+    JsonPipe: {
+    "name": "David",
+    "age": 33
+  }
+  </p><p>
+    CurrencyPipe por defecto: $1.39
+  </p><p>
+    CurrencyPipe con Euro: €1.39
+  </p><p>
+    DatePipe por defecto: Mar 14, 2022
+  </p><p>
+    DatePipe con fecha en formato dd/MM/yyyy: 14/03/2022
+  </p><h2>
+    Custom Pipe
+  </h2><p>
+    Capitalize: Buenos días, ¿Cómo estáis?
+  </p>
+</app-pipes-page>
+`;

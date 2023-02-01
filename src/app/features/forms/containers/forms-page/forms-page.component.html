@@ -1,0 +1,92 @@
+<h2>Formularios</h2>
+
+<div class="form-container">
+  <form [formGroup]="form" class="form-grid">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input data-testid="name-input" type="text" matInput [formControlName]="'name'" placeholder="Tu nombre">
+      <mat-error *ngIf="form.get('name')!.hasError('required')">
+        El nombre es <strong>Obligatorio</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input data-testid="email-input" type="email" matInput [formControlName]="'email'" placeholder="Ej. pat@example.com">
+      <mat-error *ngIf="form.get('email')!.hasError('emailExist')">
+        Este email ya está registrado
+      </mat-error>
+      <mat-error *ngIf="form.get('email')!.hasError('email') && !form.get('email')!.hasError('required')">
+        Por favor introduce un email válido
+      </mat-error>
+      <mat-error *ngIf="form.get('email')!.hasError('required')">
+        El email es <strong>Obligatorio</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Teléfono</mat-label>
+      <input data-testid="tel-input" type="tel" matInput [formControlName]="'telephone'" placeholder="0123456789">
+      <mat-error *ngIf="form.get('telephone')!.hasError('pattern') && !form.get('telephone')!.hasError('required')">
+        El teléfono debe tener 9 o 10 dígitos
+      </mat-error>
+      <mat-error *ngIf="form.get('telephone')!.hasError('required')">
+        El teléfono es <strong>Obligatorio</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input data-testid="pass-input" type="password" matInput [formControlName]="'password'">
+      <mat-error *ngIf="form.get('password')!.hasError('pattern') && !form.get('password')!.hasError('required')">
+        La contrasaña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula, un número y un caracter especial
+      </mat-error>
+      <mat-error *ngIf="form.get('password')!.hasError('required')">
+        El email es <strong>Obligatorio</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Repite la contraseña</mat-label>
+      <input data-testid="confirm-pass-input" type="password" matInput [formControlName]="'confirmPassword'">
+      <mat-error *ngIf="form.get('confirmPassword')!.hasError('confirmPassword')">
+        Las contraseñas no coinciden
+      </mat-error>
+      <mat-error *ngIf="form.get('confirmPassword')!.hasError('required')">
+        Este campo es <strong>Obligatorio</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Selecciona un país</mat-label>
+      <mat-select data-testid="select-input" [formControlName]="'country'">
+        <mat-option value="">selecciona una opción</mat-option>
+        <mat-option value="spain">España</mat-option>
+        <mat-option value="france">Francia</mat-option>
+        <mat-option value="germany">Alemania</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('country')!.hasError('required')">
+        Este campo es <strong>Obligatorio</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <div>
+      <mat-label>Sexo</mat-label>
+      <mat-radio-group aria-label="Select an option" [formControlName]="'sex'" class="example-radio-group">
+        <mat-radio-button data-testid="man-input" class="example-radio-button" value="man">Hombre</mat-radio-button>
+        <mat-radio-button data-testid="Woman-input" class="example-radio-button" value="Woman">Mujer</mat-radio-button>
+        <mat-radio-button data-testid="indeterminate-input" class="example-radio-button" value="indeterminate">Indeterminado</mat-radio-button>
+        <mat-radio-button data-testid="clear-input" class="example-radio-button" value="">Prefiero no contestar</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div>
+        <mat-checkbox  data-testid="terms-input" class="example-margin" [formControlName]="'acceptTerms'">Check me!</mat-checkbox>
+        <mat-error *ngIf="form.get('acceptTerms')!.hasError('requiredTrue')">
+          Este campo es <strong>Obligatorio</strong>
+        </mat-error>
+    </div>
+
+    <div class="full-width">
+      <button  data-testid="send-form-button" mat-raised-button type="button" [disabled]="!this.form.valid" (click)="showForm()">Enviar</button>
+    </div>
+  </form>
+</div>

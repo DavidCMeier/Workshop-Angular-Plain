@@ -1,0 +1,16 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{film.title}}</mat-card-title>
+    <mat-card-subtitle>{{film.director}} - {{film.year}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="film.image" [alt]="film.title">
+  <mat-card-content>
+    <p *ngIf="film.description else NotDescription">
+      {{film.description}}
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<ng-template #NotDescription>
+  <p>Not description</p>
+</ng-template>

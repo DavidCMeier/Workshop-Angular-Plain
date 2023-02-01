@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LifecyclePageComponent should change title when click in button 1`] = `
+<app-lifecycle-page
+  __ngContext__={[Function LRootView]}
+  size={[Function String]}
+  title={[Function String]}
+>
+  <app-title>
+    <h1
+      style="font-size: 1.4rem;"
+    >
+      adiv ed olciC
+    </h1>
+  </app-title><button>
+    Cambiar titulo
+  </button>
+</app-lifecycle-page>
+`;
+
+exports[`LifecyclePageComponent should create 1`] = `
+<app-lifecycle-page
+  __ngContext__={[Function LRootView]}
+  size={[Function String]}
+  title={[Function String]}
+>
+  <app-title>
+    <h1
+      style="font-size: 1.4rem;"
+    >
+      Ciclo de vida
+    </h1>
+  </app-title><button>
+    Cambiar titulo
+  </button>
+</app-lifecycle-page>
+`;

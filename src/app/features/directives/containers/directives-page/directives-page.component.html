@@ -1,0 +1,29 @@
+<h2>NgFor y NgIf</h2>
+<div class="grid-films">
+  <app-card-film *ngFor="let film of (films$ | async); let i=index; trackBy: trackByFilm" [film]="film" (click)="onClickFilm(film.id)"></app-card-film>
+</div>
+
+<h2>NgSwitch</h2>
+<div class="switch" >
+  <mat-radio-group [ngModel]="(favoriteSeason$ | async)!" (ngModelChange)="changeSeason($event)" aria-label="Select an option">
+    <mat-radio-button value="spring">Primavera</mat-radio-button>
+    <mat-radio-button value="summer">Verano</mat-radio-button>
+    <mat-radio-button value="autumn">Otoño</mat-radio-button>
+    <mat-radio-button value="winter">Invierno</mat-radio-button>
+  </mat-radio-group>
+  <div [ngSwitch]="(favoriteSeason$ | async)!">
+    <p *ngSwitchCase="'spring'">
+      <span *appDelayDirective="1000">Es primavera</span>
+    </p>
+    <p *ngSwitchCase="'summer'">
+      <span *appDelayDirective="1000">Es Verano</span>
+    </p>
+    <p *ngSwitchCase="'autumn'">
+      <span *appDelayDirective="1000">Es Otoño</span>
+    </p>
+    <p *ngSwitchCase="'winter'">
+      <span *appDelayDirective="1000">Es Invierno</span>
+    </p>
+    <p *ngSwitchDefault>Seleccione una opción</p>
+  </div>
+</div>

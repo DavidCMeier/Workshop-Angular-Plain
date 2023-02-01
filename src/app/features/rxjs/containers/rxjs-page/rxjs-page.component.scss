@@ -1,0 +1,11 @@
+.title{
+  text-align: center;
+}
+
+.rows{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  min-height: 100vh;
+}

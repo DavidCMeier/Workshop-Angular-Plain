@@ -1,0 +1,10 @@
+.grid-films {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.switch{
+  padding: 0.5rem;
+  display: grid;
+  grid-gap: 1rem;
+}

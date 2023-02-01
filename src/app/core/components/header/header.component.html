@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <a mat-button [routerLink]="'/'"><h1>{{title ?? 'header.title.default' | translate}}</h1></a>
+  <span class="example-spacer"></span>
+  <a mat-button class="routes" *ngFor="let route of routes" [routerLink]="route.path" routerLinkActive="activated">{{route.name}}</a>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+  <div class="select">
+    <mat-select [(value)]="currentLang" (valueChange)="changeLanguageValue($event)">
+      <mat-option *ngFor="let lang of languages" [value]="lang.code">{{lang.name}}</mat-option>
+    </mat-select>
+  </div>
+</mat-toolbar>

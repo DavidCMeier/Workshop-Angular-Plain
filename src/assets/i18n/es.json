@@ -1,0 +1,28 @@
+{
+  "header": {
+    "title": {
+      "default": "Formación"
+    },
+    "menu": {
+      "directives": "Directivas",
+      "pipes": "Pipes",
+      "rxjs": "RxJS",
+      "forms": "Formularios",
+      "lifecycle": "Ciclo de vida"
+    }
+  },
+  "home":{
+    "login": {
+      "username": {
+        "title": "Usuario",
+        "placeholder": "Introduce tu usuario"
+      },
+      "password": {
+        "title": "Contraseña",
+        "placeholder": "Introduce tu contraseña"
+      },
+      "login": "Iniciar sesión",
+      "logout": "Cerrar sesión"
+    }
+  }
+}

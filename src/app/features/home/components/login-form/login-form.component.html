@@ -1,0 +1,12 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>{{'home.login.username.title' | translate}}</mat-label>
+    <input data-testid='user-input' [(ngModel)]="user" name="user" matInput [placeholder]="'home.login.username.placeholder' | translate">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>{{'home.login.password.title' | translate}}</mat-label>
+    <input data-testid='password-input' [(ngModel)]="password" name="pass" matInput [placeholder]="'home.login.password.placeholder' | translate" type="password">
+  </mat-form-field>
+
+  <button data-testid='login-button' mat-button type="button" (click)="sendData()">{{'home.login.login' | translate}}</button>
+</form>

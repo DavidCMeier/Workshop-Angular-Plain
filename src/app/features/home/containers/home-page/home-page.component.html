@@ -1,0 +1,5 @@
+<app-login-form *ngIf="!(isLogin() | async) else logoutTemplate" (infoLogin)="login($event)"></app-login-form>
+
+<ng-template #logoutTemplate>
+  <button mat-button (click)="logout()">{{'home.login.logout' | translate}}</button>
+</ng-template>

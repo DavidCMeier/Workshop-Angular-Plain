@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleComponent should be render with a diferent Size 1`] = `
+<app-title
+  __ngContext__={[Function LRootView]}
+  size={[Function String]}
+  title={[Function String]}
+  titleElement={[Function ElementRef]}
+>
+  <h1>
+    Test title
+  </h1>
+</app-title>
+`;
+
+exports[`TitleComponent should create 1`] = `
+<app-title
+  __ngContext__={[Function LRootView]}
+  size={[Function String]}
+  title={[Function String]}
+  titleElement={[Function ElementRef]}
+>
+  <h1
+    style="font-size: 1.4rem;"
+  >
+    Test title
+  </h1>
+</app-title>
+`;

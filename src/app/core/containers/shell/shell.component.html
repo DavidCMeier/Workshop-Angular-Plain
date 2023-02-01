@@ -1,0 +1,5 @@
+<app-header [routes]="routesTranslated" [title]="title" [languages]="(languages$ | async)!" [currentLang]="(currentLang$ | async)!" (changeLang)="changeLanguage($event)"></app-header>
+<section class="shell">
+    <router-outlet></router-outlet>
+</section>
+<app-footer [company]="company" [user]="user"></app-footer>
